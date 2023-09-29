@@ -33,13 +33,13 @@ export default function BlogId({ blog }) {
                         <div className="container">
                             <arcticle>
 
-                                <div class="article-body mb-5">
+                                <div className="article-body mb-5">
                                     <div>
                                         <img src={blog.thumbnail.url} />
                                     </div>
                                     <ul className="list-unstyled d-flex gap-3 mt-4 mb-4 techtag-list">
                                         {blog.techtag.map((item) => (
-                                            <li className="d-flex align-items-center gap-1">
+                                            <li className="d-flex align-items-center gap-1" key={item.id}>
                                                 <div className="tech-icon">
                                                     <img src={item.techImg.url} />
                                                 </div>

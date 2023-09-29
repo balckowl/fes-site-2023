@@ -115,7 +115,7 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-.works .title {
+.works-item-title {
   margin-bottom: 8px;
   overflow: hidden;
   display: -webkit-box;
