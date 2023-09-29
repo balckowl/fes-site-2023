@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useRef } from "react";
+import Image from 'next/image'
 
 export default function Home({ blog }) {
   const settings = {
@@ -29,7 +30,7 @@ export default function Home({ blog }) {
       <header>
         <div className="container  d-flex align-items-center">
           <div className="site-logo mx-auto">
-            <Link href="/"><img src="../images/PP.png"/></Link>
+            <Link href="/"><Image src="/images/PP.png" alt="" width={50} height={50} /></Link>
           </div>
           {/* <nav>
             <ul className="d-flex gap-3 list-unstyled">
@@ -68,7 +69,7 @@ export default function Home({ blog }) {
                   <div className="row d-flex align-items-center p-2">
                     <div className="col-lg-6 pb-3 pb-lg-0">
                       <div>
-                        <img src="../images/pc.jpg" />
+                        <Image src="/images/demo-pc.jpg" alt="" fill className="image" />
                       </div>
                     </div>
                     <div className="col-lg-6">
@@ -95,14 +96,14 @@ export default function Home({ blog }) {
                       <div className="col-lg-6" key={blog.id}>
                         <div className="border p-3 p-lg-4 works-item">
                           <div>
-                            <img src={blog.thumbnail.url} />
+                            <Image src={blog.thumbnail.url} alt="" fill className="image" />
                           </div>
                           <div>
                             <ul className="list-unstyled d-flex gap-2 mt-2 mb-2 techtag-list">
                               {blog.techtag.map((item) => (
                                 <li className="d-flex align-items-center gap-1" key={item.id}>
                                   <div className="tech-icon">
-                                    <img src={item.techImg.url} />
+                                    <Image src={item.techImg.url} alt="" width={50} height={50} />
                                   </div>
                                 </li>
                               ))}

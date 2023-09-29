@@ -4,6 +4,7 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import useWindowSize from "../../hooks/useWindowSize";
 import Link from "next/link";
+import Image from "next/image";
 
 
 export default function BlogId({ blog }) {
@@ -15,7 +16,7 @@ export default function BlogId({ blog }) {
             <header>
                 <div className="container  d-flex align-items-center">
                     <div className="site-logo mx-auto">
-                        <Link href="/"><img src="../images/PP.png" /></Link>
+                        <Link href="/"><Image src="/images/PP.png" alt="" width={50} height={50} /></Link>
                     </div>
                     {/* <nav>
             <ul className="d-flex gap-3 list-unstyled">
@@ -35,13 +36,13 @@ export default function BlogId({ blog }) {
 
                                 <div className="article-body mb-5">
                                     <div>
-                                        <img src={blog.thumbnail.url} />
+                                        <Image src={blog.thumbnail.url} alt="" fill className="image"/>
                                     </div>
                                     <ul className="list-unstyled d-flex gap-3 mt-4 mb-4 techtag-list">
                                         {blog.techtag.map((item) => (
                                             <li className="d-flex align-items-center gap-1" key={item.id}>
                                                 <div className="tech-icon">
-                                                    <img src={item.techImg.url} />
+                                                    <Image src={item.techImg.url} alt="" width={50} height={50}/>
                                                 </div>
                                                 {width >= 576 && <div className="tech-text">
                                                     {item.techtag}
@@ -63,7 +64,7 @@ export default function BlogId({ blog }) {
                                 <div className="writer p-3">
                                     <div className="row d-flex align-items-center">
                                         <div className="col-sm-4 writer-icon d-flex justify-content-center">
-                                            <img src={blog.writerimg.url} />
+                                            <Image src={blog.writerimg.url} alt="" width={110} height={110}/>
                                         </div>
                                         <div className="col-sm-8">
                                             <h2 className="writer-name">{blog.writer}</h2>
