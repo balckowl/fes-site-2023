@@ -95,22 +95,24 @@ export default function Home({ blog }) {
                     {blog.map((blog) => (
                       <div className="col-lg-6" key={blog.id}>
                         <div className="border p-3 p-lg-4 works-item">
-                          <div>
-                            <Image src={blog.thumbnail.url} alt="" fill className="image" />
-                          </div>
-                          <div>
-                            <ul className="list-unstyled d-flex gap-2 mt-2 mb-2 techtag-list">
-                              {blog.techtag.map((item) => (
-                                <li className="d-flex align-items-center gap-1" key={item.id}>
-                                  <div className="tech-icon">
-                                    <Image src={item.techImg.url} alt="" width={50} height={50} />
-                                  </div>
-                                </li>
-                              ))}
-                            </ul>
-                            <h3 className="works-item-title"><Link href={`/blog/${blog.id}`}>{blog.title}</Link></h3>
-                            <p className="works-item-text">{blog.writer}</p>
-                          </div>
+                          <Link href={`/blog/${blog.id}`}>
+                            <div>
+                              <Image src={blog.thumbnail.url} alt="" fill className="image" />
+                            </div>
+                            <div>
+                              <ul className="list-unstyled d-flex gap-2 mt-2 mb-2 techtag-list">
+                                {blog.techtag.map((item) => (
+                                  <li className="d-flex align-items-center gap-1" key={item.id}>
+                                    <div className="tech-icon">
+                                      <Image src={item.techImg.url} alt="" width={50} height={50} />
+                                    </div>
+                                  </li>
+                                ))}
+                              </ul>
+                              <h3 className="works-item-title">{blog.title}</h3>
+                              <p className="works-item-text">{blog.writer}</p>
+                            </div>
+                          </Link>
                         </div>
                       </div>
                     ))}
@@ -121,9 +123,9 @@ export default function Home({ blog }) {
           </div>
         </section>
 
-        <section className="about">
+        <section className="access">
           <div className="container">
-            <div className="col bg-white position-relative about-bg">
+            <div className="col bg-white position-relative access-bg">
               <h2 className="position-absolute">ACCESS</h2>
             </div>
           </div>

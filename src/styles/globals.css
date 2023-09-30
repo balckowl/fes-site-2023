@@ -32,7 +32,7 @@ section {
 }
 
 header {
-  background: white;
+  background: black;
 }
 
 header>.container {
@@ -60,7 +60,7 @@ footer {
 }
 
 .about {
-  background: lightgreen;
+  background: black;
 }
 
 .about-bg {
@@ -73,10 +73,13 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 100px;
-  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+  /* text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
     -1px 1px 0 #FFF, 1px -1px 0 #FFF,
     0px 1px 0 #FFF, 0-1px 0 #FFF,
-    -1px 0 0 #FFF, 1px 0 0 #FFF;
+    -1px 0 0 #FFF, 1px 0 0 #FFF; */
+  color: white;
+  text-shadow: 0 0 10px plum, 0 0 15px plum;
+  padding: 50px;
 }
 
 .about-bg .subtitle {
@@ -86,12 +89,11 @@ footer {
 }
 
 .about-text {
-
   line-height: 2.2;
 }
 
 .works {
-  background: lightsalmon;
+  background: #181818;
 }
 
 .works-bg {
@@ -109,10 +111,12 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 100px;
-  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+  /* text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
     -1px 1px 0 #FFF, 1px -1px 0 #FFF,
     0px 1px 0 #FFF, 0-1px 0 #FFF,
-    -1px 0 0 #FFF, 1px 0 0 #FFF;
+    -1px 0 0 #FFF, 1px 0 0 #FFF; */
+  color: white;
+  text-shadow: 0 0 10px skyblue, 0 0 15px skyblue;
 }
 
 .works-bg .subtitle {
@@ -129,14 +133,40 @@ footer {
   -webkit-line-clamp: 1;
 }
 
-footer{
+.access {
+  background: #181818;
+}
+
+.access-bg {
+  border-radius: 20px;
+  padding-block: 100px;
+}
+
+.access-bg h2 {
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  /* text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+    -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+    0px 1px 0 #FFF, 0-1px 0 #FFF,
+    -1px 0 0 #FFF, 1px 0 0 #FFF; */
+  color: white;
+  text-shadow: 0 0 10px lightgreen, 0 0 15px lightgreen;
+}
+
+footer {
   padding-block: 60px;
-  background: lightgreen;
+  background: black;
+}
+
+.copyright p{
+  color: white;
 }
 
 /*作品ページ*/
 .blog-page {
-  background: lightgreen;
+  background: #181818;
 }
 
 .page-base {
@@ -224,13 +254,37 @@ footer{
 }
 
 @media (max-width: 576px) {
+  section {
+    padding-block: 90px;
+  }
+
+  .about-bg {
+    padding-block: 50px;
+    padding-bottom: 0;
+  }
+
   .about h2 {
     font-size: 45px;
     top: 0px;
   }
 
-  .about-text{
+  .about-bg .subtitle {
+    top: 35px;
+    font-size: 10px;
+  }
+
+  .about-text {
     font-size: 13px;
+  }
+
+  .works-bg {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .works-bg .subtitle {
+    top: 35px;
+    font-size: 10px;
   }
 
   .works h2 {
