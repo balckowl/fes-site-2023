@@ -24,7 +24,10 @@ export default function Home({ blog }) {
     }
   }, [videoRef]);
 
-  const images = ['../images/demo-pc.jpg', '../images/water.jpg']
+  const images = ['../images/demo-pc.jpg', '../images/water.jpg'];
+  
+  //どちらのビデオを表示するか
+  const random =  Math.floor(Math.random() * 2) + 1;
 
   return (
     <div>
@@ -52,7 +55,7 @@ export default function Home({ blog }) {
         </Slider> */}
         <video
           ref={videoRef}
-          src="../prototype.mp4"
+          src={`../prototype${random}.mp4`}
           muted
           style={{ height: "100%", width: "100%" }}
           autoPlay
