@@ -28,11 +28,9 @@ export default function Home({ blog }) {
   //どちらのビデオを表示するか
   const random = Math.floor(Math.random() * 2) + 1;
   const [isGold, setIsGold] = useState(null);
-  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-
-
+    setIsGold(localStorage.getItem('isGold'))
   }, [])
 
   return (
