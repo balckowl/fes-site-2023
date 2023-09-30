@@ -6,7 +6,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 export default function Custom54045() {
 
     useEffect(() => {
-        localStorage.setItem('isGold', true);
+        localStorage.setItem('isGold', '1');
     }, [])
 
     return (

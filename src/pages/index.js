@@ -32,7 +32,7 @@ export default function Home({ blog }) {
 
   const getData = async () => {
     await setIsGold(localStorage.getItem('isGold'))
-      .then(() => setIsLoading(true))
+    .then(() => setIsLoading(true))
   }
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function Home({ blog }) {
           <div className="site-logo mx-auto">
             {isLoading &&
               <Link href="/">
-                {isGold ? (
+                {isGold == '1' ? (
                   <Image src="/images/GoldPP.png" alt="" width={50} height={50} />
                 ) : (
                   <Image src="/images/PP.png" alt="" width={50} height={50} />
