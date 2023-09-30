@@ -90,8 +90,8 @@ export default function Custom404() {
                                             (<div>
                                                 <h3 className="mb-5 quiz-text">{quizes[currentIndex].quiz}</h3>
                                                 <div className="row g-3">
-                                                    {quizes[currentIndex].answers.map((answer) => (
-                                                        <div className="col-lg-3">
+                                                    {quizes[currentIndex].answers.map((answer,index) => (
+                                                        <div className="col-lg-3" key={index}>
                                                             <div className="answer-item" onClick={handleJudge}>{answer}</div>
                                                         </div>
                                                     ))}
