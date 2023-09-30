@@ -28,9 +28,11 @@ export default function Home({ blog }) {
   //どちらのビデオを表示するか
   const random = Math.floor(Math.random() * 2) + 1;
   const [isGold, setIsGold] = useState(null);
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    setIsGold(localStorage.getItem('isGold'))
+
+
   }, [])
 
   return (
@@ -39,7 +41,7 @@ export default function Home({ blog }) {
         <div className="container  d-flex align-items-center">
           <div className="site-logo mx-auto">
             <Link href="/">
-              {isGold ? (
+              {isGold != null && isGold ? (
                 <Image src="/images/GoldPP.png" alt="" width={50} height={50} />
               ) : (
                 <Image src="/images/PP.png" alt="" width={50} height={50} />
