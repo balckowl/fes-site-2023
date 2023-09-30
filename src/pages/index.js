@@ -127,6 +127,13 @@ export default function Home({ blog }) {
           <div className="container">
             <div className="col bg-white position-relative access-bg">
               <h2 className="position-absolute">ACCESS</h2>
+              <div className="row d-flex justify-content-center">
+                <div className="col-lg-9">
+                  <div className="google-map">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1fLm6Oq7B7kIBjSCwXlNxEpVYosM&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -155,12 +155,34 @@ footer {
   text-shadow: 0 0 10px lightgreen, 0 0 15px lightgreen;
 }
 
+.google-map {
+  position: relative;
+  /* 子要素の基準とする */
+  padding-bottom: 75%;
+  /* 表示するパディング領域の縦横比（4：3） */
+  height: 0;
+  overflow: hidden;
+}
+
+.google-map iframe {
+  position: absolute;
+  /* 親要素のパディング領域に配置するために絶対配置を指定 */
+  top: 0;
+  /* 垂直方向トップに配置 */
+  left: 0;
+  /*  水平方向左に配置 */
+  width: 100%;
+  /* 親コンテナの幅いっぱいに表示 */
+  height: 100%;
+  /* 親コンテナの高さいっぱいに表示 */
+}
+
 footer {
   padding-block: 60px;
   background: black;
 }
 
-.copyright p{
+.copyright p {
   color: white;
 }
 
@@ -290,6 +312,16 @@ footer {
   .works h2 {
     font-size: 45px;
     top: 0px;
+  }
+
+  .access h2{
+    font-size: 45px;
+    top: 0px;
+  }
+
+  .access-bg {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   /*blogページ*/
