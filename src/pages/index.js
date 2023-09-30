@@ -30,9 +30,9 @@ export default function Home({ blog }) {
   const [isGold, setIsGold] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const getData = async () => {
-    await setIsGold(localStorage.getItem('isGold'))
-    .then(() => setIsLoading(true))
+  const getData = () => {
+    setIsGold(localStorage.getItem('isGold'))
+    setIsLoading(true)
   }
 
   useEffect(() => {
