@@ -3,9 +3,8 @@ import { client } from "../libs/client";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from 'next/image'
-import { Pagination } from "@/components/Pagination";
 
 export default function Home({ blog }) {
   const settings = {
@@ -25,16 +24,27 @@ export default function Home({ blog }) {
   }, [videoRef]);
 
   const images = ['../images/demo-pc.jpg', '../images/water.jpg'];
-  
+
   //どちらのビデオを表示するか
-  const random =  Math.floor(Math.random() * 2) + 1;
+  const random = Math.floor(Math.random() * 2) + 1;
+  const [isGold, setIsGold] = useState(null);
+
+  useEffect(() => {
+    setIsGold(localStorage.getItem('isGold'))
+  }, [])
 
   return (
     <div>
       <header>
         <div className="container  d-flex align-items-center">
           <div className="site-logo mx-auto">
-            <Link href="/"><Image src="/images/PP.png" alt="" width={50} height={50} /></Link>
+            <Link href="/">
+              {isGold ? (
+                <Image src="/images/GoldPP.png" alt="" width={50} height={50} />
+              ) : (
+                <Image src="/images/PP.png" alt="" width={50} height={50} />
+              )}
+            </Link>
           </div>
           {/* <nav>
             <ul className="d-flex gap-3 list-unstyled">
@@ -160,7 +170,7 @@ export default function Home({ blog }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blog" , queries: { limit: 6 }});
+  const data = await client.get({ endpoint: "blog", queries: { limit: 6 } });
 
   return {
     props: {

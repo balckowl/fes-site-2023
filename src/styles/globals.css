@@ -372,6 +372,26 @@ a.btn-flat:hover:before {
   background: #181818;
 }
 
+.quiz-bg{
+  border-radius: 20px;
+}
+
+.quiz-bg h2{
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.quiz-item{
+  border-radius: 20px;
+  box-shadow: 3px 3px 14px -1px #fcfcfc;
+}
+
+.answer-item{
+  padding-block: 10px;
+  background: lightgoldenrodyellow;
+  text-align: center;
+}
+
 @media (max-width: 576px) {
   section {
     padding-block: 90px;
@@ -457,5 +477,11 @@ a.btn-flat:hover:before {
     width: 95px;
     height: 95px;
     margin-bottom: 10px;
+  }
+
+  /*クイズ*/
+  .quiz-text{
+    font-size: 18px;
+    text-align: justify;
   }
 }
