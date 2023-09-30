@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useRef } from "react";
 import Image from 'next/image'
+import { Pagination } from "@/components/Pagination";
 
 export default function Home({ blog }) {
   const settings = {
@@ -66,7 +67,7 @@ export default function Home({ blog }) {
               <p className="position-absolute subtitle">PiedPiperとは?</p>
               <div className="row d-flex justify-content-center ">
                 <div className="col-lg-9">
-                  <div className="row d-flex align-items-center p-2">
+                  <div className="row d-flex align-items-center p-3">
                     <div className="col-lg-6 pb-3 pb-lg-0">
                       <div>
                         <Image src="/images/demo-pc.jpg" alt="" fill className="image" />
@@ -117,6 +118,9 @@ export default function Home({ blog }) {
                       </div>
                     ))}
                   </div>
+                  <div className="d-flex justify-content-center more-btn mx-auto">
+                    <Link href="/blog/page/1" className="btn btn-flat"><span>MORE</span></Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -153,7 +157,7 @@ export default function Home({ blog }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blog" , queries: { limit: 12 }});
+  const data = await client.get({ endpoint: "blog" , queries: { limit: 6 }});
 
   return {
     props: {

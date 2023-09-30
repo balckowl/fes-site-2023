@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -220,6 +224,81 @@ footer {
   border-bottom: 2px dashed lightcoral;
 }
 
+.more-btn{
+  color: white;
+  background: black;
+  width: 200px;
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.more-btn a{
+  color: white;
+} 
+
+/* .btn,
+a.btn,
+button.btn {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-flat {
+  overflow: hidden;
+
+  padding: 20px 100px;
+
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+}
+
+a.btn-flat span {
+  position: relative;
+}
+
+a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 150%;
+  height: 500%;
+
+  content: "";
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+
+  background: #00b7ee;
+}
+
+a.btn-flat:hover:before {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+} */
+
+
 .techtag-list {
   flex-wrap: wrap;
 }
@@ -275,6 +354,24 @@ footer {
   color: white
 }
 
+/*blog記事一覧ページ*/
+.pagination li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+/*quiz*/
+.quiz{
+  background: #181818;
+}
+
 @media (max-width: 576px) {
   section {
     padding-block: 90px;
@@ -314,6 +411,15 @@ footer {
     top: 0px;
   }
 
+  .more-btn{
+    color: white;
+    background: black;
+    width: 150px;
+    padding: 5px;
+    margin-block: 30px;
+  }
+  
+
   .access h2{
     font-size: 45px;
     top: 0px;
@@ -322,6 +428,19 @@ footer {
   .access-bg {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  /*blogの一覧ページ*/
+  .pagination li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    margin-block: 30px;
   }
 
   /*blogページ*/

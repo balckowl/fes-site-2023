@@ -32,17 +32,17 @@ export default function BlogId({ blog }) {
                 <div className="row d-flex justify-content-center pt-5 pb-5 ps-2 pe-2 ps-sm-5 pe-sm-5 g-0">
                     <div className="col-lg-7 bg-white page-base p-4">
                         <div className="container">
-                            <arcticle>
+                            <article>
 
                                 <div className="article-body mb-5">
                                     <div>
-                                        <Image src={blog.thumbnail.url} alt="" fill className="image"/>
+                                        <Image src={blog.thumbnail.url} alt="" fill className="image" />
                                     </div>
                                     <ul className="list-unstyled d-flex gap-3 mt-4 mb-4 techtag-list">
                                         {blog.techtag.map((item) => (
                                             <li className="d-flex align-items-center gap-1" key={item.id}>
                                                 <div className="tech-icon">
-                                                    <Image src={item.techImg.url} alt="" width={50} height={50}/>
+                                                    <Image src={item.techImg.url} alt="" width={50} height={50} />
                                                 </div>
                                                 {width >= 576 && <div className="tech-text">
                                                     {item.techtag}
@@ -64,7 +64,7 @@ export default function BlogId({ blog }) {
                                 <div className="writer p-3">
                                     <div className="row d-flex align-items-center">
                                         <div className="col-sm-4 writer-icon d-flex justify-content-center">
-                                            <Image src={blog.writerimg.url} alt="" width={110} height={110}/>
+                                            <Image src={blog.writerimg.url} alt="" width={110} height={110} />
                                         </div>
                                         <div className="col-sm-8">
                                             <h2 className="writer-name">{blog.writer}</h2>
@@ -76,7 +76,7 @@ export default function BlogId({ blog }) {
                                         </div>
                                     </div>
                                 </div>
-                            </arcticle>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -94,18 +94,26 @@ export default function BlogId({ blog }) {
     );
 }
 
-// 静的生成のためのパスを指定します
+//静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
-    const data = await client.get({ endpoint: "blog" });
+    // const data = await client.get({ endpoint: "blog" });
 
-    const paths = data.contents.map((content) => `/blog/${content.id}`);
+    const data = await client.getList({ endpoint: "blog", queries: { fields: 'id' } });
+    const totalCount = data.totalCount
+    const allData = await client.getList({ endpoint: "blog", queries: { limit: totalCount } });
+    const paths = allData.contents.map((content) => `/blog/${content.id}`);
     return { paths, fallback: false };
+
+    // const paths = data.contents.map((content) => `/blog/${content.id}`);
+    // return { paths, fallback: false };
 };
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context) => {
     const id = context.params.id;
     const data = await client.get({ endpoint: "blog", contentId: id });
+
+    console.log(id)
 
     return {
         props: {
