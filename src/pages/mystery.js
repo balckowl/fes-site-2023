@@ -1,3 +1,4 @@
+import CommonMeta from "@/components/CommonMeta";
 import Header from "@/components/Header";
 import useWindowSize from "@/hooks/useWindowSize";
 import Image from "next/image";
