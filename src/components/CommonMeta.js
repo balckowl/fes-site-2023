@@ -6,7 +6,7 @@ export default function CommonMeta({ title, imgUrl }) {
     <Head>
       <title>{title}</title>
       <meta property="og:title" content={title} />
-      <meta property="og:image" content={imgUrl} />
+      <meta property="og:image" content={`${process.env.SITE_URL}${imgUrl}`} />
       <meta name="twitter:card" content="summary_large_image"/>
     </Head>
   )
