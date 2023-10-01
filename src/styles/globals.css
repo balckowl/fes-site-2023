@@ -234,6 +234,9 @@ footer {
 }
 
 .more-btn a {
+  text-align: center;
+  display: block;
+  width: 200px;
   color: white;
 }
 

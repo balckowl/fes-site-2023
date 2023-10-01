@@ -6,6 +6,7 @@ import useWindowSize from "../../hooks/useWindowSize";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
+import CommonMeta from "@/components/CommonMeta";
 
 
 export default function BlogId({ blog }) {
@@ -14,8 +15,8 @@ export default function BlogId({ blog }) {
 
     return (
         <div className="blog-page">
+            <CommonMeta title={blog.title} description={blog.body} imgUrl={blog.thumbnail.url}/>
             <Header />
-
             <main>
                 <div className="row d-flex justify-content-center pt-5 pb-5 ps-2 pe-2 ps-sm-5 pe-sm-5 g-0">
                     <div className="col-lg-7 bg-white page-base p-4">

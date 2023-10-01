@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 import Image from 'next/image'
 import Header from "@/components/Header";
+import { motion } from 'framer-motion'
 
 export default function Home({ blog }) {
   const settings = {
@@ -120,7 +121,7 @@ export default function Home({ blog }) {
                     ))}
                   </div>
                   <div className="d-flex justify-content-center more-btn mx-auto">
-                    <Link href="/blog/page/1" className="btn btn-flat"><span>MORE</span></Link>
+                    <Link href="/blog/page/1"><span>MORE</span></Link>
                   </div>
                 </div>
               </div>
