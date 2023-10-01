@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
 import Header from "@/components/Header";
+import CommonMeta from "@/components/CommonMeta";
 
 export default function Custom404() {
 
