@@ -20,8 +20,8 @@ export default function Mystery() {
 
     return (
         <div className="mystery-page">
+            <CommonMeta title="mystery" imgUrl="/images/quiz.jpg"/>
             <Header />
-
             <main>
                 <div className="row d-flex justify-content-center pt-5 pb-5 ps-2 pe-2 ps-sm-5 pe-sm-5 g-0">
                     <div className="col-lg-7 bg-white page-base p-4">
@@ -60,7 +60,7 @@ export default function Mystery() {
 
                                         <p>どうも、私はこのサイトに潜む怪盗。</p>
 
-                                        <p>私が今までで盗み出した中で最も高い金色輝くお宝をことサイトのどこかに隠している。</p>
+                                        <p>私が今までで盗み出した中で最も高い金色輝くお宝をこのサイトのどこかに隠している。</p>
 
                                         <p>あなたがそれを見つけられたら、私はあなたにそれをあげましょう。</p>
 

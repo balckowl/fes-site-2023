@@ -56,6 +56,7 @@ export default function Custom404() {
 
     return (
         <div>
+            <CommonMeta title="404" imgUrl="/images/pc.jpg"/>
             <Header />
 
             <main>

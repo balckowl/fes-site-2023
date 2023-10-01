@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from 'next/image'
 import Header from "@/components/Header";
 import { motion } from 'framer-motion'
+import CommonMeta from "@/components/CommonMeta";
 
 export default function Home({ blog }) {
   const settings = {
@@ -43,6 +44,7 @@ export default function Home({ blog }) {
 
   return (
     <div>
+      <CommonMeta title="Piedpiper 青山祭" imgUrl="/images/pc.jpg"/>
       <Header />
 
       <main>
