@@ -11,7 +11,7 @@ export default function Custom54045() {
 
     return (
         <div>
-            54045
+            私の負けだよ。ホームに戻ってな。もうお宝は君の元だよ。
         </div>
     );
 }

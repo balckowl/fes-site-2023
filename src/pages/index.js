@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 import Image from 'next/image'
+import Header from "@/components/Header";
 
 export default function Home({ blog }) {
   const settings = {
@@ -41,28 +42,7 @@ export default function Home({ blog }) {
 
   return (
     <div>
-      <header>
-        <div className="container  d-flex align-items-center">
-          <div className="site-logo mx-auto">
-            {isLoading &&
-              <Link href="/">
-                {isGold == '1' ? (
-                  <Image src="/images/GoldPP.png" alt="" width={50} height={50} />
-                ) : (
-                  <Image src="/images/PP.png" alt="" width={50} height={50} />
-                )}
-              </Link>
-            }
-          </div>
-          {/* <nav>
-            <ul className="d-flex gap-3 list-unstyled">
-              <li>about</li>
-              <li>works</li>
-              <li>news</li>
-            </ul>
-          </nav> */}
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* <Slider {...settings}>
@@ -167,6 +147,15 @@ export default function Home({ blog }) {
 
       <footer>
         <div className="container">
+          <div className="row d-flex justify-content-center mb-5">
+            <div className="col-lg-8">
+              <Link href="/mystery">
+                <div>
+                  <Image src="/images/bannar.png" alt="" fill className="image" />
+                </div>
+              </Link>
+            </div>
+          </div>
           <div className="copyright">
             <p className="text-center">&copy; Piedpiper 青山祭 2023</p>
           </div>

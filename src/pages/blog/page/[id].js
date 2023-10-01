@@ -2,6 +2,7 @@ import { client } from "../../../libs/client";
 import { Pagination } from '../../../components/Pagination';
 import Image from "next/image";
 import Link from "next/link";
+import Header from "@/components/Header";
 
 const PER_PAGE = 6;
 
@@ -9,20 +10,7 @@ export default function Blog({ blog, totalCount }) {
 
     return (
         <div>
-            <header>
-                <div className="container  d-flex align-items-center">
-                    <div className="site-logo mx-auto">
-                        <Link href="/"><Image src="/images/PP.png" alt="" width={50} height={50} /></Link>
-                    </div>
-                    {/* <nav>
-            <ul className="d-flex gap-3 list-unstyled">
-              <li>about</li>
-              <li>works</li>
-              <li>news</li>
-            </ul>
-          </nav> */}
-                </div>
-            </header>
+            <Header />
 
             <main>
                 <section className="works">

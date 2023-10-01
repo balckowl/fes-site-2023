@@ -5,6 +5,7 @@ import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import useWindowSize from "../../hooks/useWindowSize";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "@/components/Header";
 
 
 export default function BlogId({ blog }) {
@@ -13,20 +14,7 @@ export default function BlogId({ blog }) {
 
     return (
         <div className="blog-page">
-            <header>
-                <div className="container  d-flex align-items-center">
-                    <div className="site-logo mx-auto">
-                        <Link href="/"><Image src="/images/PP.png" alt="" width={50} height={50} /></Link>
-                    </div>
-                    {/* <nav>
-            <ul className="d-flex gap-3 list-unstyled">
-              <li>about</li>
-              <li>works</li>
-              <li>news</li>
-            </ul>
-          </nav> */}
-                </div>
-            </header>
+            <Header />
 
             <main>
                 <div className="row d-flex justify-content-center pt-5 pb-5 ps-2 pe-2 ps-sm-5 pe-sm-5 g-0">
@@ -112,8 +100,6 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
     const id = context.params.id;
     const data = await client.get({ endpoint: "blog", contentId: id });
-
-    console.log(id)
 
     return {
         props: {
