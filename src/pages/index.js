@@ -44,7 +44,7 @@ export default function Home({ blog }) {
 
   return (
     <div>
-      <CommonMeta title="Piedpiper 青山祭" imgUrl="/images/demo-pc.jpg"/>
+      <CommonMeta title="Piedpiper 青山祭" imgUrl={`${process.env.SITE_URL}/images/pc.jpg`}/>
       <Header />
 
       <main>
