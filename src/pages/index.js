@@ -92,24 +92,25 @@ export default function Home({ blog }) {
         }
 
         <div className="volume">
-          <div>Modal is Open? {isOpen ? 'Yes' : 'No'}</div>
-          <button onClick={open}>OPEN</button>
           <Modal>
             <div className="volume-modal d-flex justify-content-center align-items-center">
               <div>
-                <div className="volume-icon">
+                <div className="text-center">
                   {isMuted ? (
-                    <FontAwesomeIcon icon={faVolumeMute} />
+                    <FontAwesomeIcon icon={faVolumeMute} className="volume-icon"/>
                   ) : (
-                    <FontAwesomeIcon icon={faVolumeHigh} />
+                    <FontAwesomeIcon icon={faVolumeHigh} className="volume-icon" />
                   )}
                 </div>
-                {isMuted ? (
-                  <button onClick={() => setIsMuted(false)}>出音</button>
-                ) : (
-                  <button onClick={() => setIsMuted(true)}>消音</button>
-                )}
-                <button onClick={close}>CLOSE</button>
+                <div className="volume-btn d-flex">
+                  {isMuted ? (
+                    <button onClick={() => setIsMuted(false)}>出音</button>
+                  ) : (
+                    <button onClick={() => setIsMuted(true)}>消音</button>
+                  )}
+                  <button onClick={close}>CLOSE</button>
+                </div>
+  
               </div>
             </div>
           </Modal>
@@ -125,7 +126,7 @@ export default function Home({ blog }) {
                   <div className="row d-flex align-items-center p-3">
                     <div className="col-lg-6 pb-3 pb-lg-0">
                       <div>
-                        <Image src="/images/demo-pc.jpg" alt="" fill className="image" />
+                        <Image src="/images/pc.jpg" alt="" fill className="image" />
                       </div>
                     </div>
                     <div className="col-lg-6">

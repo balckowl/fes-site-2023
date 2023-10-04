@@ -16,6 +16,13 @@ img {
   max-width: 100%;
 }
 
+button{
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .image {
   object-fit: contain;
   position: relative !important;
@@ -73,6 +80,19 @@ footer {
 
 .volume-icon{
   font-size: 150px;
+  margin-bottom: 30px;
+}
+
+.volume-btn{
+  gap:10px;
+}
+
+.volume-btn button{
+  color: white;
+  background: black;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .about {
@@ -422,6 +442,28 @@ a.btn-flat:hover:before {
 @media (max-width: 576px) {
   section {
     padding-block: 90px;
+  }
+
+  /*volume*/
+  .volume-modal{
+    width: 220px;
+    height: 220px;
+  }
+
+  .volume-icon{
+    font-size: 60px;
+    margin-bottom: 14px;
+  }
+
+  .volume-btn{
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .volume-btn button{
+    width: 100px;
+    font-size: 15px;
+    padding: 5px;
   }
 
   .about-bg {
