@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import CommonMeta from "@/components/CommonMeta";
+import { Footer } from "@/components/Footer";
 
 
 export default function BlogId({ blog }) {
@@ -71,13 +72,7 @@ export default function BlogId({ blog }) {
                 </div>
             </main>
 
-            <footer>
-                <div className="container">
-                    <div className="copyright">
-                        <p className="text-center">&copy; Piedpiper 青山祭 2023</p>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
 
     );

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
 import Header from "@/components/Header";
 import CommonMeta from "@/components/CommonMeta";
+import { Footer } from "@/components/Footer";
 
 export default function Custom404() {
 
@@ -57,7 +58,7 @@ export default function Custom404() {
 
     return (
         <div>
-            <CommonMeta title="404" imgUrl="/images/pc.jpg"/>
+            <CommonMeta title="404" imgUrl="/images/pc.jpg" />
             <Header />
 
             <main>
@@ -96,7 +97,7 @@ export default function Custom404() {
                                             (
                                                 <div>
                                                     <div className="d-flex justify-content-center">
-                                                        <Image src="/images/thief.jpeg" alt="" width={200} height={200}/>
+                                                        <Image src="/images/thief.jpeg" alt="" width={200} height={200} />
                                                     </div>
                                                     <div>
                                                         <p className="mb-2">君はまだまだのようだね</p>
@@ -107,7 +108,7 @@ export default function Custom404() {
                                             (
                                                 <div>
                                                     <div className="d-flex justify-content-center">
-                                                        <Image src="/images/thief.jpeg" alt="" width={200} height={200}/>
+                                                        <Image src="/images/thief.jpeg" alt="" width={200} height={200} />
                                                     </div>
                                                     <div>
                                                         <p className="mb-2">君は素晴らしいね</p>
@@ -124,11 +125,7 @@ export default function Custom404() {
                 </section>
             </main>
 
-            <footer>
-                <div className="copyright">
-                    <p className="text-center">&copy; Piedpiper 青山祭 2023</p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }

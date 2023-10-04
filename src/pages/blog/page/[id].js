@@ -3,6 +3,7 @@ import { Pagination } from '../../../components/Pagination';
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const PER_PAGE = 6;
 
@@ -56,11 +57,7 @@ export default function Blog({ blog, totalCount }) {
                 </section>
             </main>
 
-            <footer>
-                <div className="copyright">
-                    <p className="text-center">&copy; Piedpiper 青山祭 2023</p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }
