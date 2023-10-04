@@ -63,6 +63,18 @@ footer {
   object-fit: cover;
 }
 
+/*volume*/
+.volume-modal{
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  background: white;
+}
+
+.volume-icon{
+  font-size: 150px;
+}
+
 .about {
   background: black;
 }

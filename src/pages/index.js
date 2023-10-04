@@ -8,8 +8,21 @@ import Image from 'next/image'
 import Header from "@/components/Header";
 import { motion } from 'framer-motion'
 import CommonMeta from "@/components/CommonMeta";
+import useWindowSize from "@/hooks/useWindowSize";
+import { useModal } from 'react-hooks-use-modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
+import { faVolumeMute } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home({ blog }) {
+
+  const [width, height] = useWindowSize();
+  const [isMuted, setIsMuted] = useState(true);
+  const [Modal, open, close, isOpen] = useModal("__next", {
+    preventScroll: true,
+    closeOnOverlayClick: true,
+  });
+
   const settings = {
     dots: false,
     infinite: true,
@@ -40,11 +53,12 @@ export default function Home({ blog }) {
 
   useEffect(() => {
     getData()
+    open();
   }, [])
 
   return (
     <div>
-      <CommonMeta title="Piedpiper 青山祭" imgUrl={`${process.env.SITE_URL}/images/pc.jpg`}/>
+      <CommonMeta title="Piedpiper 青山祭" imgUrl={`${process.env.SITE_URL}/images/pc.jpg`} />
       <Header />
 
       <main>
@@ -54,15 +68,52 @@ export default function Home({ blog }) {
               <img src={img} alt="pictuer" className="w-100 main-visual" />
             </div>))}
         </Slider> */}
-        <video
-          ref={videoRef}
-          src={`../prototype${random}.mp4`}
-          muted
-          style={{ height: "100%", width: "100%" }}
-          autoPlay
-          playsInline
-          loop
-        />
+
+        {
+          width > 576 ? (<video
+            ref={videoRef}
+            src={`../prototype${random}.mp4`}
+            style={{ height: "100%", width: "100%" }}
+            autoPlay
+            muted={isMuted}
+            playsInline
+            loop
+          />) : (
+            <video
+              ref={videoRef}
+              src={`../prototype3.mp4`}
+              style={{ height: "100%", width: "100%" }}
+              autoPlay
+              muted={isMuted}
+              playsInline
+              loop
+            />
+          )
+        }
+
+        <div className="volume">
+          <div>Modal is Open? {isOpen ? 'Yes' : 'No'}</div>
+          <button onClick={open}>OPEN</button>
+          <Modal>
+            <div className="volume-modal d-flex justify-content-center align-items-center">
+              <div>
+                <div className="volume-icon">
+                  {isMuted ? (
+                    <FontAwesomeIcon icon={faVolumeMute} />
+                  ) : (
+                    <FontAwesomeIcon icon={faVolumeHigh} />
+                  )}
+                </div>
+                {isMuted ? (
+                  <button onClick={() => setIsMuted(false)}>出音</button>
+                ) : (
+                  <button onClick={() => setIsMuted(true)}>消音</button>
+                )}
+                <button onClick={close}>CLOSE</button>
+              </div>
+            </div>
+          </Modal>
+        </div>
 
         <section className="about">
           <div className="container">
