@@ -13,6 +13,7 @@ import { useModal } from 'react-hooks-use-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 import { faVolumeMute } from "@fortawesome/free-solid-svg-icons";
+import '@fontsource/agdasima'
 
 export default function Home({ blog }) {
 
@@ -97,7 +98,7 @@ export default function Home({ blog }) {
               <div>
                 <div className="text-center">
                   {isMuted ? (
-                    <FontAwesomeIcon icon={faVolumeMute} className="volume-icon"/>
+                    <FontAwesomeIcon icon={faVolumeMute} className="volume-icon" />
                   ) : (
                     <FontAwesomeIcon icon={faVolumeHigh} className="volume-icon" />
                   )}
@@ -110,7 +111,7 @@ export default function Home({ blog }) {
                   )}
                   <button onClick={close}>CLOSE</button>
                 </div>
-  
+
               </div>
             </div>
           </Modal>
@@ -120,7 +121,7 @@ export default function Home({ blog }) {
           <div className="container">
             <div className="col bg-white position-relative about-bg">
               <h2 className="position-absolute">ABOUT</h2>
-              <p className="position-absolute subtitle">PiedPiperとは?</p>
+              {/* <p className="position-absolute subtitle">PiedPiperとは?</p> */}
               <div className="row d-flex justify-content-center ">
                 <div className="col-lg-9">
                   <div className="row d-flex align-items-center p-3">
@@ -131,7 +132,7 @@ export default function Home({ blog }) {
                     </div>
                     <div className="col-lg-6">
                       <p className="about-text">
-                        当サークルは、情熱的なプログラマーが集う大学のプログラミングコミュニティです。プログラミングのスキルを高め、クリエイティブなプロジェクトを共に開発しましょう。初心者からエキスパートまで、誰でも歓迎です。ワークショップ、ハッカソン、講演会を通じて、最新技術の学習と共有を促進します。さらに、協力してアプリやウェブサイトを制作し、実務経験を積みます。友情と協力を大切にし、楽しみながらプログラミングの世界を探求しましょう。
+                        当サークルは、情熱的なプログラマーが集まる大学内のプログラミングコミュニティです。私たちは日々、幅広いジャンルでの創作活動を行っており、その一環として、文化祭に向けて制作した作品を展示します。ウェブアプリ、ゲーム、データ分析など、様々な分野でのプロジェクトをお楽しみいただけます。私たちの作品は、プログラミングとクリエイティビティの融合を体現し、新たなアイデアや技術の可能性を示唆しています。ぜひ、私たちの展示ブースを訪れ、独自の世界をご覧ください。
                       </p>
                     </div>
                   </div>
@@ -145,7 +146,7 @@ export default function Home({ blog }) {
           <div className="container">
             <div className="col bg-white position-relative works-bg">
               <h2 className="position-absolute">WORKS</h2>
-              <p className="position-absolute subtitle">プログラミング作品</p>
+              {/* <p className="position-absolute subtitle">プログラミング作品</p> */}
               <div className="row d-flex justify-content-center g-0">
                 <div className="col-lg-9 p-2">
                   <div className="row g-3">
@@ -190,7 +191,7 @@ export default function Home({ blog }) {
               <div className="row d-flex justify-content-center">
                 <div className="col-lg-9">
                   <div className="google-map">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1fLm6Oq7B7kIBjSCwXlNxEpVYosM&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe>
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1fLm6Oq7B7kIBjSCwXlNxEpVYosM&hl=en_US&ehbc=2E312F" width="640" height="480" allowFullScreen></iframe>
                   </div>
                 </div>
               </div>
