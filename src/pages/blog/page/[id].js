@@ -5,6 +5,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import '@fontsource/agdasima'
+import CommonMeta from "@/components/CommonMeta";
 
 const PER_PAGE = 6;
 
@@ -12,6 +13,7 @@ export default function Blog({ blog, totalCount }) {
 
     return (
         <div>
+            <CommonMeta title='Piedpiper 青山祭 WORKS' imgUrl={`${process.env.SITE_URL}/images/pc.jpg`}/>
             <Header />
 
             <main>
