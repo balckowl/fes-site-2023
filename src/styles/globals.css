@@ -102,6 +102,7 @@ footer {
 .about-bg {
   border-radius: 20px;
   padding-block: 100px;
+  border: 3px solid red;
 }
 
 .about-bg h2 {
@@ -114,7 +115,7 @@ footer {
     0px 1px 0 #FFF, 0-1px 0 #FFF,
     -1px 0 0 #FFF, 1px 0 0 #FFF; */
   color: white;
-  text-shadow: 0 0 10px plum, 0 0 15px plum;
+  text-shadow: 0 0 10px red, 0 0 15px red;
   padding: 50px;
   font-family: 'Agdasima', sans-serif;
 }
@@ -136,6 +137,7 @@ footer {
 .works-bg {
   border-radius: 20px;
   padding-block: 100px;
+  border: 3px solid blue;
 }
 
 .works-item {
@@ -153,7 +155,7 @@ footer {
     0px 1px 0 #FFF, 0-1px 0 #FFF,
     -1px 0 0 #FFF, 1px 0 0 #FFF; */
   color: white;
-  text-shadow: 0 0 10px skyblue, 0 0 15px skyblue;
+  text-shadow: 0 0 10px blue, 0 0 15px blue;
   font-family: 'Agdasima', sans-serif;
 }
 
@@ -178,6 +180,7 @@ footer {
 .access-bg {
   border-radius: 20px;
   padding-block: 100px;
+  border: 3px solid green;
 }
 
 .access-bg h2 {
@@ -190,7 +193,7 @@ footer {
     0px 1px 0 #FFF, 0-1px 0 #FFF,
     -1px 0 0 #FFF, 1px 0 0 #FFF; */
   color: white;
-  text-shadow: 0 0 10px lightgreen, 0 0 15px lightgreen;
+  text-shadow: 0 0 10px green, 0 0 15px green;
   font-family: 'Agdasima', sans-serif;
 }
 
