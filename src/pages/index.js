@@ -24,13 +24,15 @@ export default function Home({ blog }) {
     closeOnOverlayClick: true,
   });
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 5000,
-    autoplay: true,
-    arrows: false,
-  };
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 5000,
+  //   autoplay: true,
+  //   arrows: false,
+  // };
+
+  const [random, setRandom] = useState(null);
 
   const videoRef = useRef(null);
 
@@ -43,7 +45,6 @@ export default function Home({ blog }) {
   const images = ['../images/demo-pc.jpg', '../images/water.jpg'];
 
   //どちらのビデオを表示するか
-  const random = Math.floor(Math.random() * 2) + 1;
   const [isGold, setIsGold] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -55,6 +56,7 @@ export default function Home({ blog }) {
   useEffect(() => {
     getData()
     open();
+    setRandom(Math.floor(Math.random() * 2) + 1)
   }, [])
 
   return (
