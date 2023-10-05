@@ -129,7 +129,7 @@ export default function Home({ blog }) {
                   <div className="row d-flex align-items-center p-3">
                     <div className="col-lg-6 pb-3 pb-lg-0">
                       <div>
-                        <Image src="/images/pc.jpg" alt="" fill className="image" />
+                        <Image src="/images/pc-work.png" alt="" fill className="image" />
                       </div>
                     </div>
                     <div className="col-lg-6">
