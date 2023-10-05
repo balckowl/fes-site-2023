@@ -13,7 +13,7 @@ export default function Blog({ blog, totalCount }) {
 
     return (
         <div>
-            <CommonMeta title='Piedpiper 青山祭 WORKS' imgUrl={`${process.env.SITE_URL}/images/pc.jpg`}/>
+            <CommonMeta title='Piedpiper 青山祭 WORKS' imgUrl={`https://pp-aoyama-fes-2023.vercel.app/images/pc.jpg`}/>
             <Header />
 
             <main>

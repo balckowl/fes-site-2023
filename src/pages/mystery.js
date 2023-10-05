@@ -21,7 +21,7 @@ export default function Mystery() {
 
     return (
         <div className="mystery-page">
-            <CommonMeta title="mystery" imgUrl={`${process.env.SITE_URL}/images/quiz.jpg`}/>
+            <CommonMeta title="mystery" imgUrl={`https://pp-aoyama-fes-2023.vercel.app/images/quiz.jpg`}/>
             <Header />
             <main>
                 <div className="row d-flex justify-content-center pt-5 pb-5 ps-2 pe-2 ps-sm-5 pe-sm-5 g-0">
