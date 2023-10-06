@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import '@fontsource/agdasima'
 import CommonMeta from "@/components/CommonMeta";
+import '@fontsource/agdasima'
+
 
 const PER_PAGE = 6;
 
