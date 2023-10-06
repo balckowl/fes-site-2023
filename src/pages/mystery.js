@@ -46,7 +46,7 @@ export default function Mystery() {
                                     <ul className="list-unstyled d-flex gap-3 mt-4 mb-4 techtag-list">
                                         <li className="d-flex align-items-center gap-1">
                                             <div className="tech-icon">
-                                                <Image src="/images/thief.png" alt="" width={50} height={50} />
+                                                <Image src="/images/thief.jpeg" alt="" width={50} height={50} />
                                             </div>
                                             {width >= 576 && <div className="tech-text">
                                                 なぞとき
