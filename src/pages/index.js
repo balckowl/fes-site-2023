@@ -61,7 +61,7 @@ export default function Home({ blog }) {
 
   return (
     <div>
-      <CommonMeta title="PiedPiper 相模原祭 2023" imgUrl={`https://pp-aoyama-fes-2023.vercel.app/images/pc.jpg`}/>
+      <CommonMeta title="PiedPiper 相模原祭 2023" imgUrl={`https://pp-aoyama-fes-2023.vercel.app/images/pc.jpg`} />
       <Header />
 
       <main>
@@ -123,7 +123,6 @@ export default function Home({ blog }) {
           <div className="container">
             <div className="col bg-white position-relative about-bg">
               <h2 className="position-absolute">ABOUT</h2>
-              {/* <p className="position-absolute subtitle">PiedPiperとは?</p> */}
               <div className="row d-flex justify-content-center ">
                 <div className="col-lg-9">
                   <div className="row d-flex align-items-center p-3">
@@ -148,7 +147,6 @@ export default function Home({ blog }) {
           <div className="container">
             <div className="col bg-white position-relative works-bg">
               <h2 className="position-absolute">WORKS</h2>
-              {/* <p className="position-absolute subtitle">プログラミング作品</p> */}
               <div className="row d-flex justify-content-center g-0">
                 <div className="col-lg-9 p-2">
                   <div className="row g-3">

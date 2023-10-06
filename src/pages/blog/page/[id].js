@@ -22,7 +22,6 @@ export default function Blog({ blog, totalCount }) {
                     <div className="container">
                         <div className="col bg-white position-relative works-bg">
                             <h2 className="position-absolute">WORKS</h2>
-                            {/* <p className="position-absolute subtitle">プログラミング作品</p> */}
                             <div className="row d-flex justify-content-center g-0">
                                 <div className="col-lg-9 p-2">
                                     <div className="row g-3">
