@@ -215,7 +215,7 @@ export default function Home({ blog }) {
             </div>
           </div>
           <div className="copyright">
-            <p className="text-center">&copy; Piedpiper 青山祭 2023</p>
+            <p className="text-center">&copy; PiedPiper 相模原祭 2023</p>
           </div>
         </div>
       </footer>
