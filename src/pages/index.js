@@ -61,7 +61,7 @@ export default function Home({ blog }) {
 
   return (
     <div>
-      <CommonMeta title="Piedpiper 青山祭" imgUrl={`https://pp-aoyama-fes-2023.vercel.app/images/pc.jpg`} />
+      <CommonMeta title="Piedpiper 青山祭" imgUrl={`https://pp-aoyama-fes-2023.vercel.app/images/pc.jpg`}/>
       <Header />
 
       <main>
@@ -164,11 +164,7 @@ export default function Home({ blog }) {
                                 {blog.techtag.map((item) => (
                                   <li className="d-flex align-items-center gap-1" key={item.id}>
                                     <div className="tech-icon">
-                                      {item.techImg.url ? (
-                                        <Image src={item.techImg.url} alt="" width={50} height={50} />
-                                      ) : (
-                                        <Image src="/images/techques.png" alt="" width={50} height={50} />
-                                      )}
+                                      <Image src={item.techImg.url} alt="" width={50} height={50} />
                                     </div>
                                   </li>
                                 ))}
