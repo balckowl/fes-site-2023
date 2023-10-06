@@ -58,7 +58,7 @@ export default function Custom404() {
 
     return (
         <div>
-            <CommonMeta title="404" imgUrl="/images/pc.jpg" />
+            <CommonMeta title="404 | PiedPiper 相模原祭 2023" imgUrl="/images/pc.jpg" />
             <Header />
 
             <main>
