@@ -54,7 +54,6 @@ export default function Home({ blog }) {
   }
 
   useEffect(() => {
-    setIsPopup(localStorage.getItem('isPopUp'))
     getData()
     setRandom(Math.floor(Math.random() * 2) + 1)
   }, [])
