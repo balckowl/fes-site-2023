@@ -2,11 +2,9 @@ import Link from "next/link";
 import { client } from "../libs/client";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 import Image from 'next/image'
 import Header from "@/components/Header";
-import { motion } from 'framer-motion'
 import CommonMeta from "@/components/CommonMeta";
 import useWindowSize from "@/hooks/useWindowSize";
 import { useModal } from 'react-hooks-use-modal';
@@ -190,7 +188,7 @@ export default function Home({ blog }) {
               <div className="row d-flex justify-content-center">
                 <div className="col-lg-9">
                   <div className="google-map">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1fLm6Oq7B7kIBjSCwXlNxEpVYosM&hl=en_US&ehbc=2E312F" width="640" height="480" allowFullScreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6690887449827!2d139.70739447574599!3d35.66052373111133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018fd7afc60d079%3A0x2f3ea690da945b3e!2z6Z2S5bGx5a2m6Zmi5aSn5a2mIOmdkuWxseOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1698983069595!5m2!1sja!2sjp" width="640" height="480" allowFullScreen></iframe>
                   </div>
                 </div>
               </div>
@@ -212,7 +210,7 @@ export default function Home({ blog }) {
             </div>
           </div>
           <div className="copyright">
-            <p className="text-center">&copy; PiedPiper 相模原祭 2023</p>
+            <p className="text-center">&copy; PiedPiper 青山祭 2023</p>
           </div>
         </div>
       </footer>
