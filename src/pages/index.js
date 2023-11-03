@@ -69,27 +69,15 @@ export default function Home({ blog }) {
             </div>))}
         </Slider> */}
 
-        {
-          width > 576 ? (<video
-            ref={videoRef}
-            src={`../prototype${random}.mp4`}
-            style={{ height: "100%", width: "100%" }}
-            autoPlay
-            muted={isMuted}
-            playsInline
-            loop
-          />) : (
-            <video
-              ref={videoRef}
-              src={`../prototype3.mp4`}
-              style={{ height: "100%", width: "100%" }}
-              autoPlay
-              muted={isMuted}
-              playsInline
-              loop
-            />
-          )
-        }
+        <video
+          ref={videoRef}
+          src={`../prototype1.mp4`}
+          style={{ height: "100%", width: "100%" }}
+          autoPlay
+          muted={isMuted}
+          playsInline
+          loop
+        />
 
         <div className="volume">
           <Modal>
